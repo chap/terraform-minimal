@@ -9,7 +9,7 @@ terraform {
 }
 
 resource "aws_route53_zone" "deploy_sandbox" {
-  name     = "deploy.sandbox.msap.io"
+  name     = "deploy-2.sandbox.msap.io"
 }
 
 locals {
