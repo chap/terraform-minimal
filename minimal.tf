@@ -12,20 +12,16 @@ terraform {
 }
 
 resource "aws_route53_zone" "deploy_sandbox" {
-  name     = "deploy-3.sandbox.msap.io"
-}
-
-locals {
-  timestamp = formatdate("YYYY-MM-DDThh:mm:ssZ", timestamp())
+  name = "deploy-3.sandbox.msap.io"
 }
 
 resource "aws_route53_record" "smoketest_txt" {
   zone_id = aws_route53_zone.deploy_sandbox.zone_id
-  name = ""
-  type = "TXT"
-  ttl = 5
+  name    = ""
+  type    = "TXT"
+  ttl     = 5
 
   records = [
-    "${local.timestamp}"
+    "${timestamp()}"
   ]
 }
