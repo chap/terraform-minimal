@@ -1,7 +1,7 @@
 terraform {
   required_version = ">= 1.1"
   backend "pg" {
-    conn_str = "postgres://username:password@postgres-terraform-state/postgres"
+    conn_str = "postgres://username:password@postgres-terraform-state/postgres?sslmode=disable"
   }
   required_providers {
     aws = {
