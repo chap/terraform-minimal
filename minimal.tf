@@ -20,7 +20,7 @@ locals {
 }
 
 resource "aws_route53_record" "smoketest_txt" {
-  # zone_id = aws_route53_zone.deploy_sandbox.zone_id
+  zone_id = aws_route53_zone.deploy_sandbox.zone_id
   name = ""
   type = "TXT"
   ttl = 5
