@@ -22,6 +22,6 @@ resource "aws_route53_record" "smoketest_txt" {
   ttl     = 5
 
   records = [
-    "${timestamp()}"
+    timestamp()
   ]
 }
